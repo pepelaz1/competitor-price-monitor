@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контур цен — мониторинг конкурентов</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/theme.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">◈</span><span>контур<span class="brand-accent">цен</span><small>PRICE INTELLIGENCE</small></span></div>
+      <nav aria-label="Разделы"><a class="active" href="#overview"><span>◫</span> Обзор</a><a href="#catalog"><span>▦</span> Товары</a><a href="#history"><span>↗</span> История цен</a></nav>
+      <div class="side-note"><span class="pulse"></span><strong>Демо-режим</strong><p>Цены и магазины созданы для портфолио. Можно добавить реальную HTTPS-карточку товара.</p></div>
+      <div class="sidebar-foot">Node.js · SQLite<br>Локальный прототип</div>
+    </aside>
+    <main>
+      <header class="topbar"><div><span class="breadcrumb">Мониторинг / Обзор</span></div><div class="top-right"><span class="today" id="today"></span><span class="avatar">В</span></div></header>
+      <div class="content">
+        <section class="intro" id="overview"><div><div class="eyebrow">ПАНЕЛЬ УПРАВЛЕНИЯ <span class="dot"></span> ДЕМО</div><h1>Цены конкурентов<br><em>под контролем.</em></h1><p>Следите за изменениями, сравнивайте предложения и выгружайте историю одним нажатием.</p><div class="actions"><button id="scan" class="primary">↻ &nbsp; Проверить цены</button><a class="secondary" href="/api/export.csv">↓ &nbsp; Скачать CSV</a></div><p class="updated" id="updated">Загружаем данные…</p></div><div class="intro-visual" aria-hidden="true"><div class="visual-label">ДИНАМИКА ЦЕН</div><svg viewBox="0 0 330 175" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9ed6c5" stop-opacity=".55"/><stop offset="1" stop-color="#9ed6c5" stop-opacity="0"/></linearGradient></defs><path d="M0 145 L35 115 L75 125 L110 85 L150 97 L190 57 L235 70 L280 35 L330 45 L330 175 L0 175Z" fill="url(#area)"/><path d="M0 145 L35 115 L75 125 L110 85 L150 97 L190 57 L235 70 L280 35 L330 45" fill="none" stroke="#298a70" stroke-width="3"/><path d="M0 118 L35 135 L75 101 L110 113 L150 72 L190 90 L235 46 L280 65 L330 22" fill="none" stroke="#e0b276" stroke-width="3"/></svg><div class="visual-legend"><span><i class="green"></i> Магазин А</span><span><i class="gold"></i> Магазин Б</span></div></div></section>
+        <section class="stats" id="stats"></section>
+        <section class="section" id="catalog"><div class="section-heading"><div><div class="eyebrow">КАТАЛОГ</div><h2>Товары под наблюдением</h2><p>Последняя найденная цена по каждому источнику.</p></div><button class="outline" id="addButton">＋ Добавить товар</button></div><div class="table-wrap"><table><thead><tr><th>ТОВАР</th><th>ЦЕЛЕВАЯ ЦЕНА</th><th>МАГАЗИН А</th><th>МАГАЗИН Б</th><th>ЛУЧШАЯ ЦЕНА</th><th>СТАТУС</th></tr></thead><tbody id="products"></tbody></table></div></section>
+        <section class="lower" id="history"><div class="history-card"><div class="eyebrow">ИСТОРИЯ</div><h2>Динамика цен</h2><p>Выберите товар, чтобы сравнить источники.</p><div class="select-wrap"><select id="productSelect" aria-label="Выберите товар"></select></div><div id="chart" class="chart"></div><div class="chart-foot"><span><i class="green"></i> Маркет А</span><span><i class="gold"></i> Маркет Б</span></div></div><div class="guide-card"><span class="guide-icon">↗</span><div class="eyebrow">КАК ЭТО РАБОТАЕТ</div><h2>От карточки<br>до решения.</h2><p>Добавьте ссылку на товар. Сервис считывает цену из структурированных данных страницы и сохраняет каждую проверку в SQLite.</p><div class="guide-step"><b>01</b><span>Добавьте HTTPS-ссылку товара</span></div><div class="guide-step"><b>02</b><span>Нажмите «Проверить цены»</span></div><div class="guide-step"><b>03</b><span>Сравните цены и скачайте CSV</span></div><small>Некоторые магазины закрывают автоматическое чтение. Такой источник получает явный статус ошибки.</small></div></section>
+        <footer>Контур цен <span>Демонстрационный проект · 2026</span></footer>
+      </div>
+    </main>
+  </div>
+  <dialog id="addDialog"><form id="addForm"><div class="dialog-head"><div><div class="eyebrow">НОВЫЙ ИСТОЧНИК</div><h2>Добавить товар</h2></div><button type="button" id="closeDialog" aria-label="Закрыть">×</button></div><p>Если артикул уже есть, источник добавится к существующему товару.</p><label>Название<input name="name" required placeholder="Например, Кофемашина Mini"></label><div class="form-row"><label>Артикул<input name="sku" required placeholder="HOME-501"></label><label>Целевая цена, ₽<input name="targetPrice" type="number" min="1" required placeholder="15000"></label></div><label>Магазин<input name="store" required placeholder="Название магазина"></label><label>HTTPS-ссылка на товар<input name="url" type="url" required placeholder="https://example.ru/product"></label><div id="formError" class="form-error" role="alert"></div><div class="form-actions"><button type="button" class="secondary" id="cancelDialog">Отмена</button><button class="primary" type="submit">Добавить источник</button></div></form></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

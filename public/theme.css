@@ -1,0 +1,140 @@
+:root{font-family:'Onest','Segoe UI',sans-serif;color:#233b59;background:#f3f8fe}
+.shell{grid-template-columns:244px minmax(0,1fr)}
+.sidebar{background:#fff;border-right:1px solid #e0ebf6;color:#254462}
+.brand{font-family:'Onest','Segoe UI',sans-serif;letter-spacing:-1px;font-size:20px}
+.brand-mark{background:#dceeff;color:#2672b8;box-shadow:none}
+.brand-accent{color:#3186c9}
+.brand small{color:#93aec5}
+.sidebar nav a{color:#7994ac}
+.sidebar nav a:hover,.sidebar nav a.active{background:#eaf5ff;color:#226cae}
+.sidebar nav a.active{box-shadow:inset 3px 0 #348dd1}
+.side-note{background:#ecf7ff;border:1px solid #d9ecf9;color:#39769d}
+.side-note p{color:#819eb3}
+.pulse,.dot{background:#54a7dc;box-shadow:0 0 0 4px #54a7dc25}
+.sidebar-foot{color:#a5b9ca}
+.topbar{background:#fff;border-bottom:1px solid #e3edf7}
+.breadcrumb{color:#8fa9bf}
+.avatar{background:#e4f1ff;color:#2875b7}
+.content{max-width:1480px}
+.intro{background:linear-gradient(115deg,#e6f4ff 0%,#f6fbff 62%,#e5f1fd 100%);border:1px solid #d9eaf9;border-radius:20px;min-height:282px;position:relative;box-shadow:0 8px 26px #356d9c0b}
+.intro::before{content:'';position:absolute;width:340px;height:340px;border-radius:50%;border:1px solid #9bc4e659;right:-70px;top:-160px;box-shadow:0 0 0 58px #79b1e10b,0 0 0 115px #79b1e109;pointer-events:none}
+.intro .eyebrow{color:#4686bd}
+.intro h1{font-family:'Onest','Segoe UI',sans-serif;font-weight:800;color:#233d5b;font-size:38px;letter-spacing:-2px;line-height:1.13}
+.intro h1 em{color:#2980c1}
+.intro p{color:#728fa9}
+.primary{background:#287ec3;border-color:#287ec3;color:#fff;box-shadow:0 5px 15px #267cb833}
+.primary:hover{background:#1b6bab;border-color:#1b6bab}
+.secondary{background:#fff;border:1px solid #c9e1f2;color:#3176ab}
+.secondary:hover{background:#f9fcff;border-color:#69a7d6}
+.intro .updated{color:#8aa7bd}
+.intro-visual{background:#fff;border:1px solid #d8eafa;box-shadow:0 18px 36px #5e9cc326;transform:rotate(3deg)}
+.visual-label{color:#779fbe}
+.intro-visual svg path:first-of-type{fill:#c5e5fb70}
+.intro-visual svg path:nth-of-type(2){stroke:#2385cc}
+.intro-visual svg path:nth-of-type(3){stroke:#75bde2}
+.visual-legend{color:#7e9db6}
+.green{background:#2385cc}.gold{background:#75bde2}
+.stat{background:#fff;border:1px solid #e1edf7;border-radius:14px;box-shadow:0 4px 18px #356d9c08;position:relative;overflow:hidden}
+.stat::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:#2786ca}
+.stat:nth-child(2)::before{background:#70bce2}
+.stat:nth-child(3)::before{background:#4f9ed5}
+.stat:nth-child(4)::before{background:#9bcfe9}
+.stat-top{color:#8fa9bd}
+.stat-top b{color:#5eabd8}
+.stat strong{font-family:'Onest','Segoe UI',sans-serif;font-weight:800;color:#274260;font-size:31px}
+.stat small{color:#a7bacb}
+.eyebrow{color:#3e88c2}
+.section-heading h2,.lower h2{font-family:'Onest','Segoe UI',sans-serif;font-weight:800;letter-spacing:-.8px;color:#284361;font-size:22px}
+.section-heading p,.lower p{color:#9aafbf}
+.outline{border-color:#c7e1f4;background:#fff;color:#2b78b6}
+.outline:hover{border-color:#3b91cf;background:#f2f9ff}
+.table-wrap,.history-card,.guide-card{background:#fff;border-color:#e1edf7;box-shadow:0 4px 18px #356d9c08}
+table{table-layout:fixed;white-space:normal}
+th,td{padding-left:10px;padding-right:10px}
+th:first-child,td:first-child{width:29%;padding-left:17px}
+th:nth-child(2),td:nth-child(2){width:14%}
+th:nth-child(3),td:nth-child(3),th:nth-child(4),td:nth-child(4){width:13%}
+th:nth-child(5),td:nth-child(5){width:14%}
+th:nth-child(6),td:nth-child(6){width:17%}
+th{background:#f7fbff;color:#93abc0}
+td{border-color:#eaf2f9;color:#5c7890}
+td strong,td b{color:#2c4764}
+td .store-name,.product-cell small{color:#a3b7c9}
+.product-icon{background:#e7f3fd;color:#4b94c9}
+.badge{display:inline-block;white-space:nowrap}
+.badge.good{background:#e5f4fc;color:#247eb0}
+.badge.neutral{background:#f0f6fb;color:#86a2b7}
+.badge.warn{background:#fff2e8;color:#bc8157}
+.source-error{color:#bd7955}
+.select-wrap::after{color:#4d91c5}
+.select-wrap select{border-color:#d5e9f7;background:#f8fcff;color:#3a7eae}
+.chart-foot{color:#8da8bc}
+.guide-card{background:#eaf5ff}
+.guide-icon{color:#bdddf5}
+.guide-card>p{color:#7797b0}
+.guide-step{border-color:#d5e9f8;color:#5b7a97}
+.guide-step b{color:#3e8ac1}
+.guide-card small{color:#95b0c6}
+footer{border-color:#e2edf6;color:#a8bdce}
+dialog{color:#233b59}
+dialog .secondary{background:#fff;color:#6d92ad;border-color:#d6e9f6}
+dialog label{color:#51718e}
+dialog input{border-color:#d7e8f5;background:#f9fcff}
+dialog input:focus{border-color:#2f86c7}
+#toast{background:#287ec3;box-shadow:0 8px 25px #2b78b344}
+#toast.error{background:#bd7155}
+@media(max-width:1100px){.shell{grid-template-columns:68px minmax(0,1fr)}.brand>span:last-child{display:none}.sidebar nav a.active{font-size:0}}
+@media(max-width:800px){table{min-width:760px}}
+@media(max-width:760px){.shell{display:block}.brand>span:last-child{display:block}.intro h1{font-size:30px}.sidebar{position:static}}
+
+/* Ozon-inspired palette: official blue, magenta, dark space and morning blue. */
+:root{color:#001a34;background:#f5f7fa}
+.sidebar{border-color:#e3e7ee;color:#001a34}
+.brand-mark{background:#e7efff;color:#005bff}
+.brand-accent{color:#005bff}
+.sidebar nav a{color:#637890}
+.sidebar nav a:hover,.sidebar nav a.active{background:#eaf1ff;color:#005bff}
+.sidebar nav a.active{box-shadow:inset 3px 0 #005bff}
+.side-note{background:#f0f5ff;border-color:#e1eaff;color:#005bff}
+.side-note p{color:#7388a4}
+.pulse,.dot{background:#f1117e;box-shadow:0 0 0 4px #f1117e20}
+.topbar{border-color:#e4e9f2}
+.avatar{background:#e9efff;color:#005bff}
+.intro{background:linear-gradient(115deg,#e8f0ff 0%,#f7faff 62%,#fceefa 100%);border-color:#dde7f9}
+.intro::before{border-color:#f1117e25;box-shadow:0 0 0 58px #005bff0b,0 0 0 115px #f1117e08}
+.intro .eyebrow{color:#005bff}
+.intro h1{color:#001a34}
+.intro h1 em{color:#f1117e}
+.intro p{color:#617894}
+.primary{background:#005bff;border-color:#005bff;box-shadow:0 5px 15px #005bff30}
+.primary:hover{background:#004bd6;border-color:#004bd6}
+.secondary{border-color:#c9d9fb;color:#005bff}
+.secondary:hover{border-color:#005bff}
+.intro-visual{border-color:#dce6fa}
+.intro-visual svg path:first-of-type{fill:#a8cbff65}
+.intro-visual svg path:nth-of-type(2){stroke:#005bff}
+.intro-visual svg path:nth-of-type(3){stroke:#f1117e}
+.green{background:#005bff}.gold{background:#f1117e}
+.stat:first-child::before,.stat:nth-child(3)::before{background:#005bff}
+.stat:nth-child(2)::before,.stat:nth-child(4)::before{background:#f1117e}
+.stat-top b{color:#005bff}
+.stat:nth-child(even) .stat-top b{color:#f1117e}
+.stat strong,.section-heading h2,.lower h2{color:#001a34}
+.eyebrow{color:#005bff}
+.outline{border-color:#c9d9fb;color:#005bff}
+.outline:hover{border-color:#005bff;background:#f0f5ff}
+.table-wrap,.history-card,.guide-card,.stat{border-color:#e4e9f2}
+th{background:#f7f9fd}
+td{border-color:#edf0f5}
+td strong,td b{color:#001a34}
+.product-icon{background:#e9efff;color:#005bff}
+.badge.good{background:#e8f0ff;color:#005bff}
+.badge.neutral{background:#f2f5fa;color:#6c819b}
+.select-wrap::after{color:#005bff}
+.select-wrap select{border-color:#d4e1fb;background:#f8faff;color:#005bff}
+.guide-card{background:#fceefa}
+.guide-icon{color:#f5c1dd}
+.guide-step{border-color:#f3ddec}
+.guide-step b{color:#f1117e}
+dialog input:focus{border-color:#005bff}
+#toast{background:#005bff;box-shadow:0 8px 25px #005bff35}
